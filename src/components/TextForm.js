@@ -6,14 +6,17 @@ export default function TextForm(props) {
             // setText("you clicked the button for converting text to uppercase! :)")
             let newtext=text.toUpperCase();
             setText(newtext);
+            props.showAlert("Text is converted into uppercase .","success")
     }
     const clear=()=>{
             let newtext=""
             setText(newtext);
+            props.showAlert("Textbox is cleared .","success")
     }
     const lowercase=()=>{
             let newtext=text.toLowerCase();
             setText(newtext);
+            props.showAlert("Text is converted into lowercase .","success")
     }
     const handleOnChange=(events)=>{
             // console.log("changed")
@@ -38,6 +41,7 @@ export default function TextForm(props) {
         text.select(); 
         // text.setSelectionRange(0,9999);
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text is copied .","success")
     }
     const download=()=>{
         let newtext=text.toLowerCase();
