@@ -46,6 +46,8 @@ export default function TextForm(props) {
     const download=()=>{
         let newtext=text.toLowerCase();
         setText(newtext);
+        
+
     }
     const replace=()=>{
         let rep=prompt('Enter the word to be replaced');
@@ -72,15 +74,15 @@ export default function TextForm(props) {
   
             <h1>{props.heading}</h1>
             <div className="mb-3">
-                <label htmlFor="myBox" className="form-label">
+                {/* <label htmlFor="myBox" className="form-label">
                     Example textarea
-                </label>
+                </label> */}
                 <textarea
                     value={text}
                     onChange={handleOnChange}
                     className="form-control"
                     id="myBox"
-                    rows="3"
+                    rows="4"
                 ></textarea>
             </div>
             <button className="btn btn-primary mx-2 my-2 " onClick={clear}>Clear Text</button>
@@ -89,16 +91,16 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-2 my-2" onClick={sentence}>Convert To Sentence Case</button>
             <button className="btn btn-primary mx-2 my-2" onClick={alternating}>Convert To aLtErNatIng cAsE</button>
             <button className="btn btn-primary mx-2 my-2" onClick={copy}>Copy To Clipboard</button>
-            <button className="btn btn-primary mx-2 my-2" onClick={download}>Download Text</button>
+            <button className="btn btn-primary mx-2 my-2" action="download" onClick={download}>Download Text</button>
             <button className="btn btn-primary mx-2 my-2" onClick={replace}>Replaceing Text</button>
             <button className="btn btn-primary mx-2 my-2" onClick={reverse}>Reverse Text</button>
             <button className="btn btn-primary mx-2 my-2" onClick={whitespaces}>Remove whitespaces  </button>
     </div>
-    <div className="container my-3">
+    <div className="container mx-1 my-3">
         <h1>Your Text Summary</h1>
-        <p>{text.split(" ").filter((element)=>{
+        <p>{text.split(/\s+/).filter((element)=>{
                 return element.length!==0;
-        }).length} Words , {text.length} characters</p>
+            }).length} Words , {text.length} characters</p>
         <p>{0.008 *(text.split(" ").length -1 )}Minutes Read</p>
         <h2>Preview</h2>
         <p>{text}</p>
