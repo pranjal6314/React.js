@@ -27,7 +27,19 @@ function App() {
       setAlert(null)
     }, 2000);
   }
-  const togglemode=()=>{
+
+  const removeBodyClass=()=>{
+    document.body.classList.remove('bg-dark')
+    document.body.classList.remove('bg-light')
+    document.body.classList.remove('bg-success')
+    document.body.classList.remove('bg-danger')
+    document.body.classList.remove('bg-warning')
+    document.body.classList.remove('bg-info')
+  }
+  const togglemode=(cls)=>{
+    console.log(cls)
+    removeBodyClass();
+    document.body.classList.add('bg-'+cls);
     setInterval(() => {
       document.title='TextUtils is best'
     }, 2000);
@@ -36,14 +48,14 @@ function App() {
     }, 1100);
     if(mode1==='light'){
           setMode('dark')
-          showAlert("dark mode is enabled","success");
+          // showAlert("dark mode is enabled","success");
           document.title='TextUtils-Light'
           document.body.style.backgroundColor='#a2b9bc'
     }else{
       setMode('light');
       document.body.style.backgroundColor='#dac292'
       document.title='TextUtils-Darks'
-      showAlert("light mode is enabled","success");
+      // showAlert("light mode is enabled","success");
     }
   }
   
