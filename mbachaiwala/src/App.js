@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+
+import IntroVideo from './components/IntroVideo.jsx';
+import './styles/App.scss';
 
 function App() {
   return (
     
     <>
-      
+        <IntroVideo/>
     </>
   );
 }
