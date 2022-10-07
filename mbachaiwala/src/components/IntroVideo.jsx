@@ -3,7 +3,8 @@ import video from "../assets/MBA.mp4"
 const IntroVideo = () => {
   return (
     <div className='intro'>
-        <video src={video} mutes autoPlay loop controlsList='nodownload'></video>
+        <video src={video} muted autoPlay loop controlsList='nodownload'></video>
+        <div></div>
     </div>
   )
 }
