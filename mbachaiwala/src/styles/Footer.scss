@@ -55,6 +55,17 @@ footer{
         color: $pink;
        }
     }
+    p{
+        font :500 12px $text;
+        color: $pink;
+        letter-spacing: 3px;
+        line-height: 1.4;
+        text-transform: uppercase;
+        position:absolute; //for making it horizontal
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%);
+    }
     
 
 }
@@ -64,4 +75,8 @@ footer{
     background-color: transparent;
     z-index:-2;
     position:absolute;
+}
+
+.fadefooter{
+    opacity: 0.4;
 }
