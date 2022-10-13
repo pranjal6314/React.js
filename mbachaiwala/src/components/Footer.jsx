@@ -47,13 +47,17 @@ function Footer() {
                     break;
             }
     }
+    const LinkBackToNormal=()=>{
+        const allfooterLinks=document.querySelectorAll(".footerLinks");
+        allfooterLinks.forEach((item)=>{item.style.opacity=1})
+    }
   return (
    <>
         <footer>
             <h1>Let's
             <br />
             #ConnectOnCutting?</h1>
-            <aside>
+            <aside onMouseLeave={LinkBackToNormal}>
                 <a onMouseOver={()=>footerLinks(0)} href="/"className='footerLinks'>Home</a>
                 <a onMouseOver={()=>footerLinks(1)} href="/story"className='footerLinks'>Story</a>
                 <a onMouseOver={()=>footerLinks(2)} href="/media"className='footerLinks'>Media</a>

@@ -16,6 +16,7 @@ import './styles/App.scss';
 import './styles/intro.scss';
 import './styles/section.scss';
 import './styles/Footer.scss'
+import './styles/mediaQuery.scss'
 
 const yellow="#fff100",pink="#ed1e79",white="#fff",brown="#6d30f1";
 function App() {
