@@ -20,6 +20,10 @@ import './styles/Footer.scss'
 import './styles/Misc.scss'
 import './styles/mediaQuery.scss'
 import { useEffect } from 'react';
+
+import './styles/mediaQuery.scss'
+
+// >>>>>>> b036824e0052096104d93c820def0b30f5c22c06
 const yellow="#fff100",pink="#ed1e79",white="#fff",brown="#6d30f1";
 function App() {
   const {freshTopic,freshTopic2,tedTalks,franchise,map,courses,album,barat,chaiwala}=data;
