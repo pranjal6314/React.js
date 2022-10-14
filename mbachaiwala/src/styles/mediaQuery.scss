@@ -13,6 +13,21 @@
 }
 
 @media screen and (max-width :820px){
+
+    .franchiseBtn{
+        
+        top:unset;
+        right:unset;
+       left:50%;
+       bottom: 1rem;
+       transform: translate(-50%);
+        &:hover{
+            transform: translate(-50%) skew(-10deg);
+        }
+    
+    }
+
+
      footer{
         padding:13rem 0;
         grid-template-columns: 1fr;

@@ -2,6 +2,7 @@
 import IntroVideo from './components/IntroVideo.jsx';
 import Section from './components/Section.jsx';
 import Footer from './components/Footer.jsx'
+import Misc from './components/Misc.jsx'
 import freshtopicImg from "./assets/academy.png";
 import freshtopicImg2 from "./assets/story.png";
 import tedTalksImg from "./assets/in-the-news.gif"
@@ -16,11 +17,26 @@ import './styles/App.scss';
 import './styles/intro.scss';
 import './styles/section.scss';
 import './styles/Footer.scss'
+import './styles/Misc.scss'
 import './styles/mediaQuery.scss'
-
+import { useEffect } from 'react';
 const yellow="#fff100",pink="#ed1e79",white="#fff",brown="#6d30f1";
 function App() {
   const {freshTopic,freshTopic2,tedTalks,franchise,map,courses,album,barat,chaiwala}=data;
+  const dotCursor=(e) =>{
+   const cursor= document.querySelector('.cursor'); 
+  //  cursor.style.top=e.pageY+"px";
+    cursor.style.top=`${e.pageY-14 }px`;
+    cursor.style.left=`${e.pageX -14}px`
+  }
+  
+  useEffect(()=>{
+    window.addEventListener("mousemove",dotCursor);
+    return ()=>{
+      window.removeEventListener("mousemove",dotCursor);
+    
+    }
+   },[])
   return (
     
     <>
@@ -37,6 +53,7 @@ function App() {
 
 
       <Footer/>
+      <Misc/>
     </>
   );
 }
