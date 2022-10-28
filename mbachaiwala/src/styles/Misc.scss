@@ -7,7 +7,7 @@
     pointer-events: none;
     border-radius: 50%;
     position: absolute;
-    transition: transform 0.3s;
+    transition: transform 0.1s;
     z-index: 1200;
 }
 .cursorHover{
@@ -56,7 +56,7 @@
     transform: translateX(-50%);
     color: $white;
     font-size: 4rem;
-    animation:mouseScollAnimation 0.5s linear infinite;
+    animation:mouseScollAnimation 0.5s linear infinite alternate;
 }
 @keyframes mouseScollAnimation{
     to{
