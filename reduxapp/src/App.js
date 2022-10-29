@@ -7,7 +7,7 @@ function App() {
     <>
     <Navbar/>
    <div className='App'>
-      <h1>Redux App</h1>
+      <h1>Redux App-by Pranjal Choudhary</h1>
    </div>
    <div className="container">
       <Shop/>
