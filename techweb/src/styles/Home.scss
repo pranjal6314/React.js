@@ -4,6 +4,7 @@
     height: 100vh;
     width: 100%;
     background-color: $second;
+    border-radius:  0 0 200px 200px;
 
     >main{
         position: absolute;
@@ -31,8 +32,46 @@
         height: 100%;
         position: absolute;
         background: no-repeat center/auto url("../assests/p1.png");
-        filter: blur(3px);
+        filter: blur(1px);
+        border-radius:  0 0 200px 200px;
     }
 
 
+}
+.home2{
+
+    width: 100%;
+    height: 100vh;
+    background-color: $second;
+    padding: 500px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -200px;
+    >img{
+        width: 30%;
+        animation: imgup  0.7s linear infinite alternate;
+    }
+    >div{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+        height: 100vh;
+    }
+    >p{
+        color:$first;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        font:100 1.2rem $text2;
+    }
+}
+
+@keyframes imgup {
+    to{
+        transform: translateY(-10px);
+    }
+    
 }
