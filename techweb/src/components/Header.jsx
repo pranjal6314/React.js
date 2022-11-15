@@ -6,7 +6,8 @@ const Header = () => {
     <nav>
       <h1>WebTech</h1>
       <main>
-        <a href={"/#home"}>Home</a>
+        {/* <HashLink smooth  to={"/#home"}>Home</HashLink> */}
+        <a   href={"/#home"}>Home</a>
         <Link to={"/Contact"}>Contact</Link>
         {/* <a href={"/#about"}>About</a>  page reload ho rha h ,so we install react-router-hash-link  */}
         <a href={"/#about"}>About</a> 
