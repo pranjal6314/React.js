@@ -1,15 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 const Header = () => {
   return (
     <nav>
       <h1>WebTech</h1>
       <main>
-        <Link to={"/"}>Home</Link>
+        <a href={"/#home"}>Home</a>
         <Link to={"/Contact"}>Contact</Link>
-        <Link to={"/#About"}>About</Link>
-        <Link to={"/#Brands"}>Brands</Link>
+        {/* <a href={"/#about"}>About</a>  page reload ho rha h ,so we install react-router-hash-link  */}
+        <a href={"/#about"}>About</a> 
+        <a href={"/#brands"}>Brands</a>
         <Link to={"/Services"}>Services</Link>
+
 
       </main>
     </nav>
