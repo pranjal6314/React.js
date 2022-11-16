@@ -7,12 +7,21 @@ const Footer = () => {
             <h1>TechWeb</h1>
             <p>@all right reserved</p>
         </div>
+        
+      <div>
+        <h5>Follow Us</h5>
         <div>
-            <h5>Follow Me</h5>
-            <a href="https://youtube.com/" target={"blank"}>Youtube</a>
-            <a href="https://instagram.com/" target={"blank"}>Instagram</a>
-            <a href="https://github.com/" target={"blank"}>GitHub</a>
+          <a href="https://youtube.com/6packprogrammer" target={"blank"}>
+            Youtube
+          </a>
+          <a href="https://instagram.com/meabhisingh" target={"blank"}>
+            Instagram
+          </a>
+          <a href="https://github.com/meabhisingh" target={"blank"}>
+            Github
+          </a>
         </div>
+      </div>
     </footer>
   )
 }
